@@ -1,0 +1,243 @@
+/* font-family: 'Barlow Semi Condensed', sans-serif;
+font-family: 'Koulen', cursive; */
+
+:root {
+   --title-fonts: 'Koulen', cursive;
+   --text-fonts: 'Koulen', cursive;
+   --color: rgb(255, 255, 255);
+   --bg-color: rgb(41, 47, 108);
+   --aside-color: rgb(38, 43, 89);
+   --text-color: rgb(29, 26, 26);
+   --text-title-color: rgb(231, 28, 174);
+   --modal-shadow: rgba(38, 43, 89, 0.445);
+
+}
+
+*,
+*::after,
+*::before {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html {
+   font-size: 62.5%;
+}
+
+body {
+   font-family: var(--text-fonts);
+   color: var(--text-color);
+   background-color: var(--bg-color);
+}
+
+h1,
+h2,
+h3 {
+   font-size: inherit;
+   font-weight: inherit;
+}
+
+a {
+   text-decoration: none;
+}
+
+/* =======================================================================
+====ASIDE============================================================== */
+
+.asidebar {
+   position: fixed;
+   width: 10rem;
+   height: 100vh;
+   background-color: var(--aside-color);
+   border-right: 1px solid var(--text-title-color);
+}
+
+
+.logo {
+   position: absolute;
+   left: 0;
+   right: 0;
+   top: 1.8rem;
+   width: 5rem;
+   height: 5rem;
+   background-color: var(--text-title-color);
+   text-align: center;
+   margin: auto;
+}
+
+.logo-text {
+   font-size: 3rem;
+   font-family: var(--title-fonts);
+   line-height: 5rem;
+   color: var(--color);
+}
+
+.title {
+   position: fixed;
+   transform: rotate(-90deg) translateX(-100%);
+   transform-origin: left top;
+   width: 100vh;
+}
+
+.title-text {
+   font-size: 5rem;
+   text-align: center;
+   font-family: var(--title-fonts);
+   color: var(--text-title-color);
+}
+
+/* =======================================================================
+====Section============================================================== */
+.section {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 100vh;
+}
+
+.btn {
+   width: 20rem;
+   padding: 1rem 3.5rem;
+   font-size: 2rem;
+   display: inline-block;
+   border: 2px solid var(--text-title-color);
+   color: var(--text-title-color);
+   letter-spacing: 1px;
+   background-color: var(--aside-color);
+   cursor: pointer;
+   transition: 0.7s;
+}
+
+.btn:hover {
+   color: var(--color);
+   box-shadow: inset 0px 20px 20px 20px var(--text-title-color);
+}
+
+/* =======================================================================
+====Modal============================================================== */
+.modal {
+   display: none;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background-color: var(--modal-shadow);
+   width: 100%;
+   height: 100%;
+
+}
+
+.show {
+   display: block;
+}
+
+.hide {
+   display: none;
+}
+
+.modal__dialog {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 100vh;
+}
+
+.modal__container {
+   margin: 1rem;
+   width: 50rem;
+   padding: 1rem;
+   background-color: var(--color);
+}
+
+.modat__header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 1.5rem;
+}
+
+h2 {
+   font-size: 2.5rem;
+   font-family: var(--title-fonts);
+   color: var(--aside-color);
+   letter-spacing: 2px;
+}
+
+.uil-multiply {
+   font-size: 2.5rem;
+   cursor: pointer;
+}
+
+.uil-multiply:hover {
+   color: var(--text-title-color);
+}
+
+.input__container {
+   margin-bottom: 2rem;
+}
+
+input {
+   font-size: 2rem;
+   border: none;
+   border-bottom: 3px solid var(--text-title-color);
+
+}
+
+input:focus {
+   outline: none;
+}
+
+label {
+   margin-left: 1rem;
+   font-size: 2rem;
+   color: var(--bg-color);
+
+}
+
+.btn__form {
+   display: block;
+   font: 2rem;
+   font-family: var(--text-fonts);
+   letter-spacing: 4px;
+   color: var(--color);
+   background-color: var(--bg-color);
+   padding: .5rem 3rem;
+   margin: 0 auto;
+   cursor: pointer;
+   transition: .3s linear;
+}
+
+.btn__form:hover {
+   color: var(--text-title-color);
+   background-color: var(--aside-color);
+}
+
+p {
+   margin-top: 2rem;
+   font-size: 1.8rem;
+}
+
+@media(max-width: 600px) {
+   .asidebar {
+      width: 6rem;
+   }
+
+   .logo {
+      top: 1.8rem;
+      width: 3rem;
+      height: 3rem;
+   }
+
+   .logo-text {
+      font-size: 2rem;
+      line-height: 3rem;
+
+   }
+
+   .title-text {
+      font-size: 3rem;
+
+   }
+}
